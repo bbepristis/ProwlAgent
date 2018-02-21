@@ -1,0 +1,11 @@
+Theme=classic/1.0
+StartupTime=1276788636
+ServerURL=https://crash-reports.mozilla.com/submit
+Add-ons=fbtest@mozilla.com:1.5a1,fiddlerhook@fiddler2.com:2.2.8.2,firebug@software.joehewitt.com:1.4.5,{6e84150a-d526-41f1-a480-a67d3fed910d}:1.4.5.1,{20a82645-c095-46ed-80e3-08825760534b}:1.0,{a6fd85ed-e919-4a43-a5af-8da18bda539f}:1.0.7,{972ce4c6-7e08-4474-a285-3208198ce6fd}:3.0.19
+BuildID=2010031422
+ProductName=Firefox
+Vendor=Mozilla
+Version=3.0.19
+InstallTime=1270645418
+CrashTime=1276790780
+SecondsSinceLastCrash=583698

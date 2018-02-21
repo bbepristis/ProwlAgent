@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C5BA78E-C17F-4831-9CAF-BC6CE63E34D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProwlAgent</RootNamespace>
+    <AssemblyName>ProwlAgent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\usqq1910\AgentUpdate\</UpdateUrl>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>832832B4C043750F41042D1F56F6BCF67C206A7A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProwlAgent_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\Lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>..\Lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.Formats">
+      <HintPath>..\Lib\AForge.Imaging.Formats.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging.IPPrototyper">
+      <HintPath>..\Lib\AForge.Imaging.IPPrototyper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Lib\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ErrorLog, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\ErrorLog.dll</HintPath>
+    </Reference>
+    <Reference Include="FiddlerCore4">
+      <HintPath>..\Lib\FiddlerCore4.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\Lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Lib\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\Lib\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net35">
+      <HintPath>..\Lib\Newtonsoft.Json.Net35.dll</HintPath>
+    </Reference>
+    <Reference Include="Selenium.WebDriverBackedSelenium">
+      <HintPath>..\Lib\Selenium.WebDriverBackedSelenium.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\Lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <HintPath>..\Lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.Selenium.Core">
+      <HintPath>..\Lib\ThoughtWorks.Selenium.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WatiN.Core">
+      <HintPath>..\Lib\WatiN.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver">
+      <HintPath>..\Lib\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\Lib\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="Environments.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="europe.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Firefox profile\bookmarkbackups\bookmarks-2011-01-24.json" />
+    <None Include="Firefox profile\bookmarkbackups\bookmarks-2011-01-26.json" />
+    <None Include="Firefox profile\bookmarkbackups\bookmarks-2011-03-09.json" />
+    <None Include="Firefox profile\bookmarkbackups\bookmarks-2011-05-19.json" />
+    <None Include="Firefox profile\bookmarkbackups\bookmarks-2011-05-23.json" />
+    <None Include="Firefox profile\Cache\00116F87d01" />
+    <None Include="Firefox profile\Cache\003CF741d01" />
+    <None Include="Firefox profile\Cache\0190AD61d01" />
+    <None Include="Firefox profile\Cache\02EAE325d01" />
+    <None Include="Firefox profile\Cache\03A07858d01" />
+    <None Include="Firefox profile\Cache\03D0A306d01" />
+    <None Include="Firefox profile\Cache\084DA5B1d01" />
+    <None Include="Firefox profile\Cache\09F3F4B9d01" />
+    <None Include="Firefox profile\Cache\0B944D90d01" />
+    <None Include="Firefox profile\Cache\0D0249DEd01" />
+    <None Include="Firefox profile\Cache\0D07017Ed01" />
+    <None Include="Firefox profile\Cache\0D497FD6d01" />
+    <None Include="Firefox profile\Cache\0D4C3776d01" />
+    <None Include="Firefox profile\Cache\0D5BB36Dd01" />
+    <None Include="Firefox profile\Cache\0E3B5E35d01" />
+    <None Include="Firefox profile\Cache\0F483FEAd01" />
+    <None Include="Firefox profile\Cache\0F4D774Ad01" />
+    <None Include="Firefox profile\Cache\10854150d01" />
+    <None Include="Firefox profile\Cache\10912302d01" />
+    <None Include="Firefox profile\Cache\1159AA4Cd01" />
+    <None Include="Firefox profile\Cache\13EB0EBFd01" />
+    <None Include="Firefox profile\Cache\1A2E7AF0d01" />
+    <None Include="Firefox profile\Cache\1A7AF0F0d01" />
+    <None Include="Firefox profile\Cache\1CD73135d01" />
+    <None Include="Firefox profile\Cache\1D5BC4A1d01" />
+    <None Include="Firefox profile\Cache\209DBDDBd01" />
+    <None Include="Firefox profile\Cache\2267FE9Dd01" />
+    <None Include="Firefox profile\Cache\22B04DB1d01" />
+    <None Include="Firefox profile\Cache\22B50511d01" />
+    <None Include="Firefox profile\Cache\2316510Dd01" />
+    <None Include="Firefox profile\Cache\27177C0Cd01" />
+    <None Include="Firefox profile\Cache\29E24BF0d01" />
+    <None Include="Firefox profile\Cache\29E70350d01" />
+    <None Include="Firefox profile\Cache\2A99E775d01" />
+    <None Include="Firefox profile\Cache\2CECEEF6d01" />
+    <None Include="Firefox profile\Cache\2D1326A2d01" />
+    <None Include="Firefox profile\Cache\2D472889d01" />
+    <None Include="Firefox profile\Cache\2D64013Bd01" />
+    <None Include="Firefox profile\Cache\2E405BEEd01" />
+    <None Include="Firefox profile\Cache\2F39616Cd01" />
+    <None Include="Firefox profile\Cache\2FEB147Cd01" />
+    <None Include="Firefox profile\Cache\2FEDE3AEd01" />
+    <None Include="Firefox profile\Cache\32152DABd01" />
+    <None Include="Firefox profile\Cache\3357BA1Fd01" />
+    <None Include="Firefox profile\Cache\344C4B71d01" />
+    <None Include="Firefox profile\Cache\3554CCBFd01" />
+    <None Include="Firefox profile\Cache\36007559d01" />
+    <None Include="Firefox profile\Cache\3B5D5077d01" />
+    <None Include="Firefox profile\Cache\3C27D703d01" />
+    <None Include="Firefox profile\Cache\3C27EE03d01" />
+    <None Include="Firefox profile\Cache\3C2D403Dd01" />
+    <None Include="Firefox profile\Cache\3D976660d01" />
+    <None Include="Firefox profile\Cache\3E14CCE0d01" />
+    <None Include="Firefox profile\Cache\3E948F02d01" />
+    <None Include="Firefox profile\Cache\3F16B693d01" />
+    <None Include="Firefox profile\Cache\3F7A3717d01" />
+    <None Include="Firefox profile\Cache\3F9EFE17d01" />
+    <None Include="Firefox profile\Cache\4288A5F9d01" />
+    <None Include="Firefox profile\Cache\448A9D96d01" />
+    <None Include="Firefox profile\Cache\4B8D3715d01" />
+    <None Include="Firefox profile\Cache\4C591419d01" />
+    <None Include="Firefox profile\Cache\4F063E80d01" />
+    <None Include="Firefox profile\Cache\54907507d01" />
+    <None Include="Firefox profile\Cache\54D4BBBCd01" />
+    <None Include="Firefox profile\Cache\558B8597d01" />
+    <None Include="Firefox profile\Cache\57784148d01" />
+    <None Include="Firefox profile\Cache\578F6BB8d01" />
+    <None Include="Firefox profile\Cache\57D414C2d01" />
+    <None Include="Firefox profile\Cache\5A93BC7Bd01" />
+    <None Include="Firefox profile\Cache\5BEDF936d01" />
+    <None Include="Firefox profile\Cache\5D425D8Dd01" />
+    <None Include="Firefox profile\Cache\5F8B50B9d01" />
+    <None Include="Firefox profile\Cache\61268CBFd01" />
+    <None Include="Firefox profile\Cache\62D808CEd01" />
+    <None Include="Firefox profile\Cache\62F0BC05d01" />
+    <None Include="Firefox profile\Cache\6325C8D7d01" />
+    <None Include="Firefox profile\Cache\65158E81d01" />
+    <None Include="Firefox profile\Cache\662368C9d01" />
+    <None Include="Firefox profile\Cache\679538FAd01" />
+    <None Include="Firefox profile\Cache\6B9FD215d01" />
+    <None Include="Firefox profile\Cache\6DEF97A4d01" />
+    <None Include="Firefox profile\Cache\6F5693B7d01" />
+    <None Include="Firefox profile\Cache\71CA56F5d01" />
+    <None Include="Firefox profile\Cache\71E6ABD1d01" />
+    <None Include="Firefox profile\Cache\7326A8D7d01" />
+    <None Include="Firefox profile\Cache\76AD7F4Bd01" />
+    <None Include="Firefox profile\Cache\781B0F15d01" />
+    <None Include="Firefox profile\Cache\781E47B5d01" />
+    <None Include="Firefox profile\Cache\79B85B09d01" />
+    <None Include="Firefox profile\Cache\79BC644Dd01" />
+    <None Include="Firefox profile\Cache\7BF05A65d01" />
+    <None Include="Firefox profile\Cache\7C17EF84d01" />
+    <None Include="Firefox profile\Cache\7D141DE4d01" />
+    <None Include="Firefox profile\Cache\7E17ACE5d01" />
+    <None Include="Firefox profile\Cache\7E7195E5d01" />
+    <None Include="Firefox profile\Cache\7F08B3B8d01" />
+    <None Include="Firefox profile\Cache\801C3030d01" />
+    <None Include="Firefox profile\Cache\84572EB7d01" />
+    <None Include="Firefox profile\Cache\88324A88d01" />
+    <None Include="Firefox profile\Cache\8B2D34D2d01" />
+    <None Include="Firefox profile\Cache\8C0A9AF0d01" />
+    <None Include="Firefox profile\Cache\8DF8425Bd01" />
+    <None Include="Firefox profile\Cache\8EA6FC51d01" />
+    <None Include="Firefox profile\Cache\8F0B8684d01" />
+    <None Include="Firefox profile\Cache\907B451Bd01" />
+    <None Include="Firefox profile\Cache\90E41EF6d01" />
+    <None Include="Firefox profile\Cache\9146BB97d01" />
+    <None Include="Firefox profile\Cache\941049CEd01" />
+    <None Include="Firefox profile\Cache\960DBA6Ed01" />
+    <None Include="Firefox profile\Cache\99928A6Ed01" />
+    <None Include="Firefox profile\Cache\9A73B1AFd01" />
+    <None Include="Firefox profile\Cache\9BAC2EE5d01" />
+    <None Include="Firefox profile\Cache\9C39F090d01" />
+    <None Include="Firefox profile\Cache\9EE3B782d01" />
+    <None Include="Firefox profile\Cache\9EFA9F87d01" />
+    <None Include="Firefox profile\Cache\A0EBD53Cd01" />
+    <None Include="Firefox profile\Cache\A11F9D73d01" />
+    <None Include="Firefox profile\Cache\A1EA554Ed01" />
+    <None Include="Firefox profile\Cache\A1EF1DEEd01" />
+    <None Include="Firefox profile\Cache\A5DF7A41d01" />
+    <None Include="Firefox profile\Cache\AB1FFE1Ad01" />
+    <None Include="Firefox profile\Cache\AC85D4D8d01" />
+    <None Include="Firefox profile\Cache\AF587041d01" />
+    <None Include="Firefox profile\Cache\B25489B5d01" />
+    <None Include="Firefox profile\Cache\B3CB357Bd01" />
+    <None Include="Firefox profile\Cache\B539A922d01" />
+    <None Include="Firefox profile\Cache\B56AC4E2d01" />
+    <None Include="Firefox profile\Cache\B899B23Fd01" />
+    <None Include="Firefox profile\Cache\B936D090d01" />
+    <None Include="Firefox profile\Cache\B95AD090d01" />
+    <None Include="Firefox profile\Cache\BA158F84d01" />
+    <None Include="Firefox profile\Cache\BA19D2B6d01" />
+    <None Include="Firefox profile\Cache\BA28B465d01" />
+    <None Include="Firefox profile\Cache\BA2ED345d01" />
+    <None Include="Firefox profile\Cache\BB95CD62d01" />
+    <None Include="Firefox profile\Cache\BBA20B58d01" />
+    <None Include="Firefox profile\Cache\BC8AD6F7d01" />
+    <None Include="Firefox profile\Cache\BD49B3EDd01" />
+    <None Include="Firefox profile\Cache\BDDE4322d01" />
+    <None Include="Firefox profile\Cache\BDEBD152d01" />
+    <None Include="Firefox profile\Cache\BE49B089d01" />
+    <None Include="Firefox profile\Cache\BFC8B44Bd01" />
+    <None Include="Firefox profile\Cache\BFDB21BFd01" />
+    <None Include="Firefox profile\Cache\C0389D1Bd01" />
+    <None Include="Firefox profile\Cache\C2ABE119d01" />
+    <None Include="Firefox profile\Cache\C7D89D1Bd01" />
+    <None Include="Firefox profile\Cache\C986DA4Dd01" />
+    <None Include="Firefox profile\Cache\C9A7018Bd01" />
+    <None Include="Firefox profile\Cache\CA4B55CCd01" />
+    <None Include="Firefox profile\Cache\CAD66029d01" />
+    <None Include="Firefox profile\Cache\CC8C093Fd01" />
+    <None Include="Firefox profile\Cache\CE3E973Dd01" />
+    <None Include="Firefox profile\Cache\CE405BE9d01" />
+    <None Include="Firefox profile\Cache\D0C6E451d01" />
+    <None Include="Firefox profile\Cache\D18BC67Ed01" />
+    <None Include="Firefox profile\Cache\D3F59EC4d01" />
+    <None Include="Firefox profile\Cache\D418B5F9d01" />
+    <None Include="Firefox profile\Cache\D44E21F1d01" />
+    <None Include="Firefox profile\Cache\D52120CBd01" />
+    <None Include="Firefox profile\Cache\D5B33C4Cd01" />
+    <None Include="Firefox profile\Cache\D7C8A306d01" />
+    <None Include="Firefox profile\Cache\DC876B4Ed01" />
+    <None Include="Firefox profile\Cache\E12FCDE0d01" />
+    <None Include="Firefox profile\Cache\E143D693d01" />
+    <None Include="Firefox profile\Cache\E17B47E0d01" />
+    <None Include="Firefox profile\Cache\E3A9AC59d01" />
+    <None Include="Firefox profile\Cache\E497EAD4d01" />
+    <None Include="Firefox profile\Cache\E497F7DDd01" />
+    <None Include="Firefox profile\Cache\E844C9ACd01" />
+    <None Include="Firefox profile\Cache\EB49A213d01" />
+    <None Include="Firefox profile\Cache\ED1638D8d01" />
+    <None Include="Firefox profile\Cache\EE9F1BA3d01" />
+    <None Include="Firefox profile\Cache\F46CA2E0d01" />
+    <None Include="Firefox profile\Cache\F4962118d01" />
+    <None Include="Firefox profile\Cache\F5566743d01" />
+    <None Include="Firefox profile\Cache\F8A6318Bd01" />
+    <None Include="Firefox profile\Cache\FAE33492d01" />
+    <None Include="Firefox profile\Cache\FBC38C18d01" />
+    <None Include="Firefox profile\Cache\FC010955d01" />
+    <None Include="Firefox profile\Cache\FC240E06d01" />
+    <None Include="Firefox profile\Cache\FC9DF074d01" />
+    <None Include="Firefox profile\Cache\FE6377DAd01" />
+    <None Include="Firefox profile\Cache\_CACHE_001_" />
+    <None Include="Firefox profile\Cache\_CACHE_002_" />
+    <None Include="Firefox profile\Cache\_CACHE_003_" />
+    <None Include="Firefox profile\Cache\_CACHE_MAP_" />
+    <None Include="Firefox profile\cert8.db" />
+    <None Include="Firefox profile\compatibility.ini" />
+    <None Include="Firefox profile\compreg.dat" />
+    <None Include="Firefox profile\content-prefs.sqlite" />
+    <None Include="Firefox profile\cookies.sqlite" />
+    <None Include="Firefox profile\downloads.sqlite" />
+    <None Include="Firefox profile\firebug\annotations.json" />
+    <None Include="Firefox profile\formhistory.sqlite" />
+    <None Include="Firefox profile\key3.db" />
+    <None Include="Firefox profile\localstore.rdf" />
+    <None Include="Firefox profile\mimeTypes.rdf" />
+    <None Include="Firefox profile\minidumps\260acee8-0fb9-4720-99b0-5b2fbfd6e65d.dmp" />
+    <None Include="Firefox profile\minidumps\260acee8-0fb9-4720-99b0-5b2fbfd6e65d.extra" />
+    <None Include="Firefox profile\minidumps\314503ed-d799-490c-b2e6-9cee9e8cf8b6.dmp" />
+    <None Include="Firefox profile\minidumps\314503ed-d799-490c-b2e6-9cee9e8cf8b6.extra" />
+    <None Include="Firefox profile\minidumps\9d1b6bfb-e0a4-4412-844d-eb2bc6e0c248.dmp" />
+    <None Include="Firefox profile\minidumps\9d1b6bfb-e0a4-4412-844d-eb2bc6e0c248.extra" />
+    <None Include="Firefox profile\minidumps\bc45a38f-662e-4832-acbd-dd4f4521fc30.dmp" />
+    <None Include="Firefox profile\minidumps\bc45a38f-662e-4832-acbd-dd4f4521fc30.extra" />
+    <None Include="Firefox profile\minidumps\c4a0b962-7314-4392-a829-890d2e684d58.dmp" />
+    <None Include="Firefox profile\minidumps\c4a0b962-7314-4392-a829-890d2e684d58.extra" />
+    <None Include="Firefox profile\OfflineCache\index.sqlite" />
+    <None Include="Firefox profile\permissions.sqlite" />
+    <None Include="Firefox profile\places.sqlite" />
+    <None Include="Firefox profile\places.sqlite-journal" />
+    <None Include="Firefox profile\pluginreg.dat" />
+    <None Include="Firefox profile\search.json" />
+    <None Include="Firefox profile\search.sqlite" />
+    <None Include="Firefox profile\secmod.db" />
+    <None Include="Firefox profile\signons.sqlite" />
+    <None Include="Firefox profile\urlclassifier3.sqlite" />
+    <None Include="Firefox profile\webappsstore.sqlite" />
+    <None Include="Firefox profile\XPC.mfl" />
+    <None Include="Firefox profile\xpti.dat" />
+    <None Include="Firefox profile\XUL.mfl" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Selenium.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AgentConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Firefox profile\blocklist.xml" />
+    <Content Include="Firefox profile\bookmarks.html" />
+    <Content Include="Firefox profile\cert_override.txt" />
+    <Content Include="Firefox profile\chrome\userChrome-example.css" />
+    <Content Include="Firefox profile\chrome\userContent-example.css" />
+    <Content Include="Firefox profile\prefs.js" />
+    <Content Include="Firefox profile\signons3.txt" />
+    <Content Include="Firefox profile\urlclassifierkey3.txt" />
+    <Content Include="selenium-server-standalone-2.21.0.jar">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WatiN.Core.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Firefox profile\extensions\" />
+    <Folder Include="Firefox profile\selenium-ide-scripts\formats\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomTestingFramework\CustomTestingFrameWork\TestBaseClassLibrary.csproj">
+      <Project>{1FFF8837-E5AE-499C-8BA6-7F44C5EAE9CA}</Project>
+      <Name>TestBaseClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
